@@ -33,7 +33,7 @@ LIST_FILE="$CACHE_DIR/preview_list.txt"
 mkdir -p "$THUMB_DIR"
 > "$LIST_FILE"
 
-find "$WALL_DIR" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.webp" \) | while read -r img; do
+find -L "$WALL_DIR" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.webp" \) | while read -r img; do
     filename=$(basename "$img")
     thumb_file="$THUMB_DIR/$filename.png"
 

@@ -82,25 +82,6 @@ listview {
     spacing:                     20px;
 }
 
-// listview {
-//     enabled:                     true;
-//     columns:                     5; /* Number of elements in a row */
-//     lines:                       1; /* One row */
-//     padding:                     26px 36px;
-//     cycle:                       true;
-//     dynamic:                     true;
-//     scrollbar:                   false;
-//     layout:                      vertical; /* Vertical arrangement */
-//     reverse:                     false;
-//     fixed-height:                true;
-//     fixed-columns:               true;
-
-//     background-color:            transparent;
-//     spacing:                     20px;
-    
-//     border:                      0px;
-// }
-
 element {
     orientation:                vertical;
     border-radius:              12px;

@@ -1,0 +1,1 @@
+### Custom Scripts for selecting a wallpaper with Rofi
