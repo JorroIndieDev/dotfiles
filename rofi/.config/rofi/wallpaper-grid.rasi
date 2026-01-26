@@ -1,0 +1,129 @@
+/**
+
+Author: Jorro
+
+*/
+@import "~/.cache/wal/colors-rofi-dark"
+
+
+/*
+To customize, or alter some colors:
+There are transparent alternatives of background and background-alt
+
+i.e: background-t90   background-t40   background-alt-t40   background-alt-t90
+
+Transparency from 100-40
+that is set in ~/.config/wal/templates/colors-rofi-dark
+*/
+
+
+configuration {
+    show-icons:                 true;
+    hover-select:               true;
+    kb-accept-entry:            "Return,space";
+    kb-cancel:                  "Escape";
+}
+
+* {
+    background-color:           transparent;
+    text-color:                 @frontend;
+}
+
+window {
+    location:                   center;
+    anchor:                     center;
+    // width:                      1100px;      /* Keeps the window wide as seen in your image */
+    // height:                     300px;       /* Height of the overall container */
+    spacing:                    10px;
+    transparency: "real";
+
+    background-color:           @background-t90; 
+    border:                     3px;
+    border-color:               @active;
+    border-radius:              20px;
+}
+
+mainbox {
+    padding:                    20px;
+    children:                   [inputbar,listview];
+}
+
+inputbar {
+    enabled:                      true;
+    text-color:                   @foreground-t70;
+    background-color:             transparent;
+    padding:                      5px;
+    margin:                       10px;
+    children:                     [ "entry" ];
+}
+
+entry {
+    enabled:                      true;
+    text-color:                   inherit;
+    background-color:             transparent;
+}
+
+listview {
+
+    enabled:                     true;
+
+    columns:                     5;
+    lines:                       1;
+    // padding:                      20px;
+
+    cycle:                       true;
+    dynamic:                     true;
+    layout:                      vertical; /* Vertical arrangement */
+    scrollbar:                   false;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     20px;
+}
+
+// listview {
+//     enabled:                     true;
+//     columns:                     5; /* Number of elements in a row */
+//     lines:                       1; /* One row */
+//     padding:                     26px 36px;
+//     cycle:                       true;
+//     dynamic:                     true;
+//     scrollbar:                   false;
+//     layout:                      vertical; /* Vertical arrangement */
+//     reverse:                     false;
+//     fixed-height:                true;
+//     fixed-columns:               true;
+
+//     background-color:            transparent;
+//     spacing:                     20px;
+    
+//     border:                      0px;
+// }
+
+element {
+    orientation:                vertical;
+    border-radius:              12px;
+    
+    padding:                    10px;
+    padding:                    10px;
+    border:                     3px;
+    border-color:               transparent;
+}
+
+element-icon {
+    size:                       190px; /* Adjust this to make the images larger/smaller */
+    horizontal-align:           0.5;   
+    vertical-align:             0.5;   
+    cursor:                     pointer;
+}
+
+element selected {
+    background-color:           @background-alt-t40;
+    border-color:               @selected;
+
+}
+
+element-text {
+    enabled:                    false; /* Hide filenames to show only images */
+}

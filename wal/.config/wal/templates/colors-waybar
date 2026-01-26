@@ -1,0 +1,27 @@
+/* --- Surfaces & Text --- */
+@define-color surface_main      {background};  /* Core background */
+@define-color surface_alt       {color8};      /* Secondary surface (widgets/cards) */
+@define-color text_main         {foreground};  /* Primary readable text */
+@define-color text_dim          {color7};      /* De-emphasized text */
+@define-color text_bright       {color15};     /* High-contrast/Header text */
+
+/* --- Primary Palette (The "Main" Theme Vibe) --- */
+@define-color primary           {color4};      /* Main brand/accent color */
+@define-color primary_light     {color12};     /* Lighter/Glow version of primary */
+@define-color primary_dim       {color0};      /* Deepest version of primary */
+
+/* --- Secondary Palette (Complementary Accents) --- */
+@define-color secondary         {color2};      /* Support accent (often for success/status) */
+@define-color secondary_light   {color10};     /* Interactive state for secondary */
+
+/* --- Auxiliary Palette (Variety & Details) --- */
+@define-color aux_a             {color5};      /* Extra accent for variety (often magenta-ish) */
+@define-color aux_a_light       {color13};
+@define-color aux_b             {color6};      /* Extra accent for variety (often cyan-ish) */
+@define-color aux_b_light       {color14};
+
+/* --- Feedback & States --- */
+@define-color alert             {color1};      /* Danger/Urgency */
+@define-color alert_light       {color9};      /* Bright danger */
+@define-color info              {color3};      /* Warnings/Notifications */
+@define-color info_light        {color11};     /* Bright warning */

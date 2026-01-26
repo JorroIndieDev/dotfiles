@@ -1,0 +1,25 @@
+### Variables
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Apps
+set $term alacritty
+#set $rofi_cmd rofi \
+#	-terminal '$term' \
+#	-show-icons \
+#	-drun-search-path $HOME/.local/share/applications 
+set $menu "rofi -terminal '$term' -show-icons -drun-search-path $HOME/.local/share/applications -i -modi drun,run,combi,window -show drun"
+#set $menu $rofi_cmd -show combi -combi-nodes drun#run -modes combi
+#set $menu  j4-dmenu-desktop --dmenu='bemenu -i -l 10'
+#set $screenshot grimshot --notify save area $HOME/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
+set $filemanager alacritty yazi
+#set $clipboard-hist cliphist list | bemenu -i -l 20| cliphist decode | wl-copy
+set $web-browser firefox
+#set $notification sh $HOME/.config/sway/scripts/dunst-hist.sh
+set $wallpaper-picker sh $HOME/.config/sway/scripts/wallpaper-picker-beta.sh
+
+set $wallpaper-theme-picker sh $HOME/.config/de-themes/wall-selector.sh
+set $custom-theme-picker sh $HOME/.config/de-themes/theme-selector.sh

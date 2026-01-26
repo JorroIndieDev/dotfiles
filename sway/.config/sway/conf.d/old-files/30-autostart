@@ -1,0 +1,15 @@
+### AutoStart
+#exec_always autotiling
+
+exec waybar
+
+#exec_always wl-paste --watch cliphist store
+
+#exec_always --no-startup-id swaybg -i "$(cat ~/.cache/wal/wal)" -m fill
+
+exec_always dunst
+
+exec_always swayidle -w \
+    timeout 120 '/home/pirtur/Scripts/swaylock.sh' \
+    before-sleep '/home/pirtur/Scripts/swaylock.sh'
+

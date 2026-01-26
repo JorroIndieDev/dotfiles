@@ -1,0 +1,88 @@
+@import "/home/pirtur/.cache/wal/colors-waybar.css";
+
+/* Reset */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Bar background */
+window#waybar {
+    background: @background;
+}
+
+#waybar {
+    background: @background;
+    color: @foreground;
+    font-family: JetBrainsMonoNF;
+    font-size: 16px;
+    border: none;
+    margin: 0; /* rely on config margins, not CSS margins */
+}
+
+/* Module padding */
+#battery,
+#clock,
+#cpu,
+#custom-keyboard-layout,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#window {
+    padding: 0 10px;
+}
+
+/* States */
+#battery.warning { color: @color3; }
+#battery.critical { color: @color1; }
+
+#cpu.warning { color: @color3; }
+#cpu.critical { color: @color1; }
+
+#memory.warning { color: @color3; }
+#memory.critical { color: @color1; }
+
+#network.disconnected { color: @color3; }
+
+#temperature.critical { color: @color1; }
+
+/* Workspaces */
+#workspaces {
+    /* no extra margins here */
+}
+
+#workspaces button {
+    padding: 0 10px;
+    color: @color7;
+    background: @background;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button.focused {
+    background: @color2;
+    color: @background;
+    border-bottom: 2px solid @color2;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background: @color1;
+    color: @background;
+    border-bottom: 2px solid @color1;
+}
+
+/* Clock, tray etc */
+#clock {
+    font-weight: bold;
+}
+
+#tray {
+    padding-right: 10px;
+}
+

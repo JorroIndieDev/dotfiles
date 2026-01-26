@@ -1,0 +1,16 @@
+include ~/.config/sway/conf.d/config
+
+include ~/.config/sway/conf.d/keybinds
+
+include ~/.config/sway/conf.d/theme
+
+# Output settings
+output HDMI-A-1 pos 0 0
+output eDP-1 pos 1920 0
+
+# Floating window rules
+for_window [app_id="franken-term"] {
+    floating enable
+    resize set 800 500
+    move position center
+}

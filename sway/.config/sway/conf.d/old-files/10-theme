@@ -1,0 +1,8 @@
+### Theme / Appearance
+default_border pixel 3
+default_floating_border pixel 3
+gaps inner 10
+
+# Window Decorations
+client.focused     $primary  $primary  $bg_color  $primary
+client.unfocused   $border_inactive $border_inactive $text_color $border_inactive

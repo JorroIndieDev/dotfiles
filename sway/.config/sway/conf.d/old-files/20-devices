@@ -1,0 +1,6 @@
+### Input configuration
+input * {
+    accel_profile "flat"
+    pointer_accel 0
+}
+

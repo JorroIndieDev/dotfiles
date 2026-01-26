@@ -1,0 +1,28 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+/* --- Surfaces & Text --- */
+@define-color background-waybar  @background;
+@define-color foreground-waybar  @foreground;
+
+@define-color background_alt    @color8;
+@define-color foreground_alt    @color15;
+
+/* --- Primary Palette --- */
+@define-color primary           @color2;
+@define-color primary_light     @color14;
+
+/* --- Secondary Palette --- */
+@define-color secondary         @color1;
+@define-color secondary_light   @color3;
+
+/* --- Auxiliary Palette --- */
+@define-color aux_a             @color5;
+@define-color aux_a_light       @color13;
+@define-color aux_b             @color6;
+@define-color aux_b_light       @color14;
+
+/* --- Feedback & States --- */
+@define-color error             #f7768e;
+@define-color warning           #ea9d63;
+@define-color alert             #d1bf89;
+@define-color muted             #4a4851;

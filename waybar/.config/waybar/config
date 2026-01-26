@@ -1,0 +1,93 @@
+{
+    "layer": "top",
+    "position": "top",
+    
+    "height": 30,
+    "fixed-height": true,
+
+    "reload_style_on_change": true,
+
+    "margin-top": 5,
+    "margin-left": 5,
+    "margin-right": 5,
+    "mode": "dock",
+
+    "modules-left": [
+        "sway/workspaces"
+    ],
+    "modules-center": [],
+    "modules-right": [
+    	"custom/frankenstein",
+        "network",
+        "pulseaudio",
+        "memory",
+	"battery",
+        "tray",
+        "clock#time"
+    ],
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "clock#time": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "tooltip": false
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "  {}%", 
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "network": {
+        "interval": 5,
+        "format-wifi": "  {essid} ({signalStrength}%)",
+        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}",
+        "format-disconnected": "⚠  Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "foot nmtui"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "sway/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": true,
+        "format": "{icon} {name}",
+        "format-icons": {
+            "1:www": "龜",
+            "2:mail": "",
+            "3:code": "",
+            "4:term": "",
+            "5:media": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "custom/frankenstein": {
+    	"interval": 10,
+    	"return-type": "json",
+    	"exec": "~/scripts/check_frankenstein.sh",
+    	"on-click": "alacritty --class franken-term -e ssh victor@192.168.1.110"
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}
+

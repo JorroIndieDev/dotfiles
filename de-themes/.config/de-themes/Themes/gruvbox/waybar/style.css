@@ -1,0 +1,99 @@
+@import "./colors.css";
+
+/* Reset everything */
+* {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 18px;
+    color: @foreground-waybar;
+}
+
+/* Whole bar */
+#waybar {
+    background: @background-waybar;
+}
+
+/* Focused workspace */
+#workspaces button.focused {
+    background: @background_alt;
+    color: @foreground-waybar;
+}
+
+/* Inactive workspace */
+#workspaces button {
+    background: @background-waybar;
+    color: @foreground_alt;
+    padding: 0 10px;
+}
+
+/* Generic module padding */
+#battery,
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#temperature,
+#tray {
+    padding: 0 10px;
+}
+
+/* Clock */
+#clock {
+    font-weight: bold;
+    color: @foreground-waybar;
+}
+
+/*Battery*/
+#battery {
+color: @foreground-waybar;
+}
+
+
+/* Memory and CPU state colors */
+#memory.warning,
+#cpu.warning {
+    color: @warning;
+}
+
+#memory.critical,
+#cpu.critical {
+    color: @error;
+}
+
+/* Network disconnected */
+#network.disconnected {
+    color: @alert;
+}
+
+/* Pulseaudio muted */
+#pulseaudio.muted {
+    color: @muted;
+}
+
+/* Tray icons */
+#tray {
+    background: @background-waybar;
+}
+
+/* Slight visual separation between modules */
+#workspaces button + button {
+    margin-left: 2px;
+}
+
+#custom-frankenstein.online {
+    color: #a6e3a1; /* Green */
+}
+
+#custom-frankenstein.offline {
+    color: #f38ba8; /* Red */
+}
+
+#custom-frankenstein {
+    margin-right: 10px;
+    font-size: 16px;
+}
+

@@ -1,0 +1,9 @@
+### Theme / Appearance
+default_border pixel 3
+default_floating_border pixel 3
+gaps inner 10
+
+# Window Decorations
+# We use $accent and $background which are defined in your 15-theme-colors
+client.focused     $color15      $color15      $foreground  $color15      $color15
+client.unfocused   $background  $background  $foreground  $background  $background

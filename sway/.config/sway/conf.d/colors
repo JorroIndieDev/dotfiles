@@ -1,0 +1,10 @@
+## Define colors
+set $bg_color       #1a1b26
+set $text_color     #c0caf5
+set $primary        #657cae
+set $border_inactive #444444
+
+## Window Decorations
+## Format:class   |  border  |   backgrnd    |   text    |   indicator   |   child_border
+client.focused     $primary    $primary     $bg_color    $primary       $primary
+client.unfocused   $border_inactive $border_inactive $text_color $border_inactive $border_inactive

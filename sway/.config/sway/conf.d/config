@@ -1,0 +1,78 @@
+
+
+#####################################
+#             Variables             #
+#####################################
+
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+
+
+#####################################
+#               Apps                #
+#####################################
+
+# Set Terminal
+set $term alacritty
+
+# Set menu / app launcher
+# old menu
+# set $menu "rofi -terminal '$term' \
+#         -show-icons -drun-search-path $HOME/.local/share/applications \
+#         -i -modi drun,run,combi,window -show drun"
+set $menu ~/.config/rofi/custom-theme/launcher.sh
+
+# Set filemanager
+set $filemanager nautilus
+
+# Set Web browser
+set $web-browser firefox
+
+# custom scripts
+set $wallpaper-theme-picker sh $HOME/.config/de-themes/wallpaper-theme-selector.sh
+set $wallpaper-picker sh $HOME/.config/de-themes/wallpaper-selector.sh
+set $custom-theme-picker sh $HOME/.config/de-themes/theme-selector.sh
+
+#####################################
+#       Input configuration         #
+#####################################
+
+input * {
+    accel_profile "flat"
+    pointer_accel 0
+}
+
+
+
+#####################################
+#           Auto Start              #
+#####################################
+
+#exec_always autotiling
+
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+exec systemctl --user stop xdg-desktop-portal
+exec systemctl --user stop xdg-desktop-portal-wlr
+exec systemctl --user start xdg-desktop-portal-wlr
+
+exec waybar
+
+# Launch the sww daemon
+exec swww-daemon
+# Restore last scheme / theme
+exec wal -R -n
+# Apply the last wallpaper used
+exec swww img ~/Pictures/Wallpapers/$( cat ~/.config/de-themes/applied_wallpaper)
+
+# set background with sway, default background (fallback)
+#exec_always --no-startup-id swaybg -i "$(cat ~/.cache/wal/wal)" -m fill
+
+exec_always dunst
+
+exec_always swayidle -w \
+    timeout 120 '/home/pirtur/Scripts/swaylock.sh' \
+    before-sleep '/home/pirtur/Scripts/swaylock.sh'

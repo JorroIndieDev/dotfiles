@@ -1,0 +1,41 @@
+/* Pywal Color Template */
+* {
+    background:                 {background};
+    background-alt:             {color8};
+    foreground:                 {foreground};
+    selected:                   {color2};
+    active:                     {color1};
+
+    /* RGB variants */
+   /* Transparency Variants (Hex Alpha) */
+    background-t95:             {background}F2;
+    background-t90:             {background}E6;
+    background-t85:             {background}D9;
+    background-t80:             {background}CC;
+    background-t75:             {background}BF;
+    background-t70:             {background}B3;
+    background-t60:             {background}99;
+    background-t50:             {background}80;
+    background-t40:             {background}66;
+
+    background-alt-t95:             {color8}F2;
+    background-alt-t90:             {color8}E6;
+    background-alt-t85:             {color8}D9;
+    background-alt-t80:             {color8}CC;
+    background-alt-t75:             {color8}BF;
+    background-alt-t70:             {color8}B3;
+    background-alt-t60:             {color8}99;
+    background-alt-t50:             {color8}80;
+    background-alt-t40:             {color8}66;
+
+    foreground-t95:             {foreground}F2;
+    foreground-t90:             {foreground}E6;
+    foreground-t85:             {foreground}D9;
+    foreground-t80:             {foreground}CC;
+    foreground-t75:             {foreground}BF;
+    foreground-t70:             {foreground}B3;
+    foreground-t60:             {foreground}99;
+    foreground-t50:             {foreground}80;
+    foreground-t40:             {foreground}66;
+
+}

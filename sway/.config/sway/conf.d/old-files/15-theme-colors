@@ -1,0 +1,10 @@
+# HARDCODED COLORS - No more Matugen
+set $bg_color        #1a1b26
+set $text_color      #c0caf5
+set $primary_accent  #7aa2f7
+set $border_inactive #444444
+
+# Compatibility Aliases for 10-theme
+set $primary         $primary_accent
+set $surface         $bg_color
+set $on_surface      $text_color
