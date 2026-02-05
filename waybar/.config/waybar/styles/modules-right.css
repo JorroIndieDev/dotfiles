@@ -75,3 +75,18 @@
 #custom-right_div.5 {
 	color: @background-waybar;
 }
+#tray {
+    background-color: @primary;
+    padding: 0 5px;
+}
+
+#tray menu {
+    /* This styles the right-click menu of the icons */
+    background-color: @primary;
+    color: @background-waybar;
+}
+
+/* If they still feel stuck, target the image directly */
+#tray image {
+    padding: 0 5px;
+}

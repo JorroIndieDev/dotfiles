@@ -101,7 +101,7 @@ element-icon {
 
 element selected {
     background-color:           @background-alt-t40;
-    border-color:               @selected;
+    border-color:               @active;
 
 }
 

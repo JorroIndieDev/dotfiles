@@ -4,7 +4,7 @@
     background-alt:             {color8};
     foreground:                 {foreground};
     selected:                   {color2};
-    active:                     {color1};
+    active:                     {color6};
 
     /* RGB variants */
    /* Transparency Variants (Hex Alpha) */

@@ -56,7 +56,8 @@
 		"custom/left_div#8",
 		"battery",
 		"network",
-		"bluetooth"
+		"bluetooth",
+		"tray"
 		// "custom/power_menu"
 	],
 

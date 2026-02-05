@@ -1,8 +1,15 @@
 ## Showcase
-
 <p align="center">
-  <img src="./assets/demo.gif" alt="Project Demo" width="800">
-</p>
+    <img src="./assets/2.png" width="45%"><img src="./assets/3.png" width="45%">
+  </p>
+<details>
+  <summary><b>📷 Click to expand screenshot gallery</b></summary>
+  <p align="center">
+    <img src="./assets/1.png" width="45%"> <img src="./assets/2.png" width="45%">
+    <img src="./assets/3.png" width="45%"> <img src="./assets/4.png" width="45%">
+    <img src="./assets/5.png" width="91%">
+  </p>
+</details>
 
 ## Features
 * **Live Previews:** Instant thumbnails via ImageMagick.
