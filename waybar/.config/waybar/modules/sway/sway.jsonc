@@ -1,0 +1,29 @@
+{
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">  {}</span>",
+        "tooltip": false
+    },
+
+    "sway/window": {
+        "format": "{}",
+        "max-length": 120
+    },
+
+    "sway/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": true,
+        "format": "{icon} {name}",
+        "format-icons": {
+            "1:www": "龜",
+            "2:mail": "",
+            "3:editor": "",
+            "4:terminals": "",
+            "5:portal": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    }
+    
+}

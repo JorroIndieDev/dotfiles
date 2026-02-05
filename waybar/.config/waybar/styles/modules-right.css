@@ -1,0 +1,77 @@
+/*----------------
+    media info
+----------------*/
+
+#mpris {
+	padding: 0 12px;
+	background-color: @background-waybar;
+}
+
+/*------------
+    volume
+------------*/
+
+#custom-left_div.6 {
+	color: @background-waybar;
+}
+#pulseaudio,
+#wireplumber {
+	background-color: @background-waybar;
+}
+
+/*----------------
+    brightness
+----------------*/
+
+#custom-left_div.7 {
+	background-color: @background-waybar;
+	color: @secondary;
+}
+#backlight {
+	background-color: @secondary;
+	color: @background-waybar;
+}
+
+/*-------------
+    battery
+-------------*/
+
+#custom-left_div.8 {
+	background-color: @secondary;
+	color: @primary;
+}
+#battery {
+	background-color: @primary;
+	color: @background-waybar;
+}
+
+
+/*----------------
+    power menu
+----------------*/
+
+#custom-power_menu {
+	border-radius: 16px;
+	padding: 0 19px 0 16px;
+	color: @accent;
+}
+#custom-power_menu:hover {
+	background-color: @hover-bg;
+}
+/*-----------------
+    system tray
+-----------------*/
+
+#network {
+	background-color: @primary;
+	padding: 0 6px 0 4px;
+	color: @background-waybar;
+}
+#bluetooth {
+	background-color: @primary;
+	padding: 0 5px;
+	color: @background-waybar;
+}
+#custom-right_div.5 {
+	color: @background-waybar;
+}

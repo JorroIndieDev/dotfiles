@@ -1,0 +1,91 @@
+/*-----------------
+    temperature
+-----------------*/
+
+#custom-left_div.2 {
+	color: @background-waybar;
+}
+
+/*------------
+    memory
+------------*/
+
+#custom-left_div.3 {
+	background-color: @background-waybar;
+	color: @secondary;
+}
+#memory {
+	background-color: @secondary;
+	color: @background-waybar;
+}
+
+/*---------
+    cpu
+---------*/
+
+#custom-left_div.4 {
+	background-color: @secondary;
+	color: @primary;
+}
+#cpu {
+	background-color: @primary;
+	color: @background-waybar;
+}
+#custom-left_inv.1 {
+	color: @primary;
+}
+
+/*-----------------
+    distro icon
+-----------------*/
+
+#custom-left_div.5,
+#custom-right_div.2 {
+	color: @secondary;
+}
+#custom-distro {
+	padding: 0 10px 0 5px;
+	background-color: @secondary;
+	color: @primary_light;
+}
+
+/*--------------------
+    idle inhibitor
+--------------------*/
+
+#custom-right_inv.1 {
+	color: @primary;
+}
+#idle_inhibitor {
+	background-color: @primary;
+}
+
+/*----------
+    time
+----------*/
+
+#clock.time {
+	padding-right: 6px;
+	background-color: @primary;
+	color: @background-waybar;
+}
+#custom-right_div.3 {
+	background-color: @secondary;
+	color: @primary;
+}
+
+/*----------
+    date
+----------*/
+
+#clock.date {
+	padding-left: 6px;
+	background-color: @secondary;
+	color: @background-waybar;
+}
+#custom-right_div.4 {
+	background-color: @background-waybar;
+	color: @secondary;
+}
+
+

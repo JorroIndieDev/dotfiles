@@ -23,7 +23,8 @@ that is set in ~/.config/wal/templates/colors-rofi-dark
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,filebrowser,window";
+	// modi:                       "drun,filebrowser,window";
+	modi:                       "drun";
     show-icons:                 true;
     display-drun:               "";
     display-run:                "";
@@ -95,7 +96,8 @@ inputbar {
     text-color:                  @foreground;
     orientation:                 horizontal;
     /* I added the icon back to the children list as requested */
-    children:                    [ "entry", "dummy", "mode-switcher" ];
+    children:                    ["entry"];
+    // children:                    ["entry, dummy, mode-switcher"];
 }
 
 /* This is your search icon */
@@ -113,7 +115,7 @@ entry {
     enabled:                     true;
     expand:                      false;
     width:                       250px;
-    padding:                     12px 16px 0px 10px;
+    padding:                     12px 16px 10px 10px;
     border-radius:               0% 10% 0% 0%;
     background-color:            @background-alt;
     text-color:                  inherit;
@@ -123,13 +125,13 @@ entry {
     font:                        "JetBrains Mono Nerd Font 8";
 }
 dummy {
-    expand:                      true;
+    expand:                      false;
     background-color:            transparent;
 }
 
 /*****----- Mode Switcher -----*****/
 mode-switcher{
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     10px;
     background-color:            transparent;
     text-color:                  @foreground;

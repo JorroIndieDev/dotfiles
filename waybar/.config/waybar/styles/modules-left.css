@@ -1,0 +1,24 @@
+/*----------------
+    workspaces
+----------------*/
+
+#custom-left_div.1,
+#custom-right_div.1 {
+	color: @background-waybar;
+}
+#workspaces {
+	padding: 0 1px;
+	background-color: @background-waybar;
+}
+#workspaces button.active label,
+#workspaces button.focused label {
+	color: @primary_light;
+}
+
+/*------------------
+    window title
+------------------*/
+
+#window {
+	margin: 0 12px;
+}

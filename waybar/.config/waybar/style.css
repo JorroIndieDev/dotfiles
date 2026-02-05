@@ -1,1 +1,54 @@
-/home/captain/.config/de-themes/Themes/gruvbox/waybar/style.css
+@import "colors.css";
+
+* {
+	/* ignore GTK theme */
+	all: initial;
+	color: @foreground-waybar;
+}
+
+@import "styles/fonts.css";
+@import "styles/modules-center.css";
+@import "styles/modules-left.css";
+@import "styles/modules-right.css";
+@import "styles/states.css";
+
+.module {
+	margin-bottom: 0px;
+}
+
+#waybar {
+	background-color: transparent;
+}
+#waybar > box {
+	margin: 0px;
+	background-color: transparent;
+}
+
+button {
+	border-radius: 16px;
+	min-width: 16px;
+	padding: 0 10px;
+}
+button:hover {
+	background-color: @background_alt;
+	color: @foreground_alt;
+}
+
+tooltip {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+tooltip > box {
+    background-color: @background-waybar;
+    border: 2px solid @background_alt;
+    border-radius: 10px;
+    padding: 4px 8px;
+    margin: 0; 
+}
+
+tooltip label {
+    background: transparent;
+    padding: 0;
+}

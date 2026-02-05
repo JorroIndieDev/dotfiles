@@ -1,99 +1,44 @@
-@import "./colors.css";
+@import "colors.css";
 
-/* Reset everything */
 * {
-    border: none;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 18px;
-    color: @foreground-waybar;
+	/* ignore GTK theme */
+	all: initial;
+	color: @foreground-waybar;
 }
 
-/* Whole bar */
+@import "styles/fonts.css";
+@import "styles/modules-center.css";
+@import "styles/modules-left.css";
+@import "styles/modules-right.css";
+@import "styles/states.css";
+
+.module {
+	margin-bottom: -1px;
+}
+
 #waybar {
-    background: @background-waybar;
+	background-color: @background_alt;
+}
+#waybar > box {
+	margin: 4px;
+	background-color: @background-waybar;
 }
 
-/* Focused workspace */
-#workspaces button.focused {
-    background: @background_alt;
-    color: @foreground-waybar;
+button {
+	border-radius: 16px;
+	min-width: 16px;
+	padding: 0 10px;
+}
+button:hover {
+	background-color: @background_alt;
+	color: @foreground_alt;
 }
 
-/* Inactive workspace */
-#workspaces button {
-    background: @background-waybar;
-    color: @foreground_alt;
-    padding: 0 10px;
+tooltip {
+	border: 2px solid @secondary;
+	border-radius: 10px;
+	background-color: @background-waybar;
 }
-
-/* Generic module padding */
-#battery,
-#clock,
-#cpu,
-#memory,
-#network,
-#pulseaudio,
-#temperature,
-#tray {
-    padding: 0 10px;
+tooltip > box {
+	padding: 0 6px;
 }
-
-/* Clock */
-#clock {
-    font-weight: bold;
-    color: @foreground-waybar;
-}
-
-/*Battery*/
-#battery {
-color: @foreground-waybar;
-}
-
-
-/* Memory and CPU state colors */
-#memory.warning,
-#cpu.warning {
-    color: @warning;
-}
-
-#memory.critical,
-#cpu.critical {
-    color: @error;
-}
-
-/* Network disconnected */
-#network.disconnected {
-    color: @alert;
-}
-
-/* Pulseaudio muted */
-#pulseaudio.muted {
-    color: @muted;
-}
-
-/* Tray icons */
-#tray {
-    background: @background-waybar;
-}
-
-/* Slight visual separation between modules */
-#workspaces button + button {
-    margin-left: 2px;
-}
-
-#custom-frankenstein.online {
-    color: #a6e3a1; /* Green */
-}
-
-#custom-frankenstein.offline {
-    color: #f38ba8; /* Red */
-}
-
-#custom-frankenstein {
-    margin-right: 10px;
-    font-size: 16px;
-}
-
