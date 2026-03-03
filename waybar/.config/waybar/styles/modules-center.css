@@ -29,7 +29,7 @@
 }
 #cpu {
 	background-color: @primary;
-	color: @background-waybar;
+	color: @foreground-waybar;
 }
 #custom-left_inv.1 {
 	color: @primary;
@@ -67,7 +67,7 @@
 #clock.time {
 	padding-right: 6px;
 	background-color: @primary;
-	color: @background-waybar;
+	color: @foreground-waybar;
 }
 #custom-right_div.3 {
 	background-color: @secondary;

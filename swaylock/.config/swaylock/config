@@ -1,0 +1,36 @@
+# ~/.config/swaylock/config
+#color=1e1e2e
+image=/home/captain/Pictures/Wallpapers/Ado-cut.jpg
+# --- General Appearance ---
+clock
+indicator
+indicator-radius=120
+indicator-thickness=10
+#screenshots
+effect-blur=7x5
+effect-vignette=0.5:0.5
+
+# --- Clock Styling ---
+timestr=%H:%M
+datestr=%A, %d %B
+text-color=ffffff
+
+# --- The "Idle" Circle (Default State) ---
+# Format: RRGGBBAA (the '88' at the end makes it semi-transparent)
+inside-color=1e1e2e88
+ring-color=bb9af7
+
+# --- The "Typing" Circle ---
+# This shows up as you hit keys
+inside-ver-color=1e1e2e88
+ring-ver-color=5650a1
+key-hl-color=416385
+
+# --- The "Wrong Password" Circle ---
+inside-wrong-color=f7768e88
+ring-wrong-color=f7768e
+
+# --- The "Verifying" Circle ---
+# While it's checking the password
+inside-clear-color=e0af6888
+ring-clear-color=e0af68

@@ -9,4 +9,4 @@ include "$HOME/.cache/wal/colors-sway"
 ## Map variables to match what 10-theme expects
 default_border pixel 3
 default_floating_border pixel 3
-gaps inner 10
+gaps inner 5

@@ -10,22 +10,22 @@ bindsym $mod+Shift+e exec $filemanager
 bindsym $mod+Shift+Return exec $menu
 bindsym $mod+Shift+s exec $screenshot
 bindsym $mod+q kill
-bindsym $mod+Shift+a exec $wallpaper-picker
+
+# Shortcut for Alacritty (Floating)
+bindsym Mod1+Return exec $term --class floating_shell
 
 # custom script hotkeys
-bindsym $mod+p exec $wallpaper-picker > /tmp/rofi-theme-debug.log 2>&1
+# for Logs
+#bindsym $mod+p exec $wallpaper-picker > /tmp/rofi-theme-debug.log 2>&1
 bindsym $mod+Shift+p exec $wallpaper-theme-picker
-#bindsym $mod+p exec $wallpaper-picker
+bindsym $mod+p exec $wallpaper-picker
 bindsym $mod+t exec $custom-theme-picker
 
 # swaylock   
-bindsym $mod+Ctrl+L exec sh /home/pirtur/Scripts/swaylock.sh
-
-# SwayNC 
-bindsym $mod+Shift+w exec $notification
+bindsym $mod+Ctrl+L exec $lock_screen
 
 # Clipboard
-bindsym $mod+Shift+v exec $clipboard-hist
+#bindsym $mod+Shift+v exec $clipboard-hist
 
 # Floating window mouse behavior
 floating_modifier $mod normal
