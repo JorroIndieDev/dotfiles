@@ -97,3 +97,6 @@ The active configuration for rofi is the `.config/rofi/custom-theme/custom-style
 * [wallust](https://codeberg.org/explosion-mental/wallust)
 * [adi1090x rofi configs](https://github.com/adi1090x/rofi)
 * [base config](https://github.com/pirtur/sway-dots/)
+
+
+
