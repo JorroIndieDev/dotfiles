@@ -32,3 +32,23 @@ https://wallhaven.cc/w/k81776
 
 https://wallhaven.cc/w/qr327r
 
+https://wallhaven.cc/w/n6emjw
+
+https://wallhaven.cc/w/47oxxv
+
+
+
+MH wallpapers:
+https://wallhaven.cc/w/wyxrer
+
+https://wallhaven.cc/w/og9j85
+
+https://wallhaven.cc/w/rrvd5m
+
+https://wallhaven.cc/w/28kpoy
+
+https://wallhaven.cc/w/ne78er
+
+https://wallhaven.cc/w/w55117
+
+https://wallhaven.cc/w/wepxeq

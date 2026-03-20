@@ -1,42 +1,37 @@
 #!/usr/bin/env bash
 
-# wallpaper-theme-selector
-
-#================================================
-# Export paths, for 'wal', it was not being recognized
-# as a command when launching via keybind on sway/conf.d/keybinds
-#================================================
+# Standardize environment for keybind execution
 export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 export PATH=$PATH:$HOME/.local/bin:/usr/local/bin
 
-
-#================================================
-# DIRECTORIES
-#================================================
 TMP_CHOICE="/tmp/wallpaper_selection_result"
-
+WALL_DIR="$HOME/Pictures/Wallpapers"
 
 #================================================
-# Run the selector
+# Run the selector (Wait for user input)
 #================================================
 $HOME/.config/de-themes/wallpaper-selector.sh
 
-
 #================================================
-# Apply the colors via 'wal' and reload
+# Apply the colors via 'wal'
 #================================================
-if [ -f "$TMP_CHOICE" ]; then
+if [ -s "$TMP_CHOICE" ]; then
     SELECTED=$(cat "$TMP_CHOICE")
-    FULL_PATH="$HOME/Pictures/Wallpapers/$SELECTED"
+    FULL_PATH="${WALL_DIR}/${SELECTED}"
 
-    wal --backend haishoku -i "$FULL_PATH" -n
-    
-    # Refresh Waybar
-    pkill -USR2 waybar
-    
-    # Clean up
-    rm "$TMP_CHOICE"
-    echo "Success: $SELECTED applied."
+    if [ -f "$FULL_PATH" ]; then
+        # Apply colors silently
+        wal --backend haishoku -i "$FULL_PATH" -n
+        
+        # Refresh Waybar (if running)
+        pgrep -x waybar > /dev/null && pkill -USR2 waybar
+        
+        # Clean up
+        rm "$TMP_CHOICE"
+        echo "Success: $SELECTED applied."
+    else
+        echo "Error: Image file not found at $FULL_PATH"
+    fi
 else
-    echo "Selection cancelled or failed."
+    echo "Selection cancelled."
 fi

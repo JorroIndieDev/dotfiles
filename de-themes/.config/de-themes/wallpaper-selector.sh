@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-# wallpaper-selector
-
-# Run thumbnail cache in background
+# Run thumbnail cache in background (silently)
 $HOME/.config/de-themes/wallpaper-thumbnail-cache.sh > /dev/null 2>&1 &
 
 #================================================
@@ -18,20 +16,26 @@ rm -f "$TMP_CHOICE"
 #================================================
 # Launch wallpaper selector
 #================================================
+# If the list is empty (first run), wait for cache to finish
+if [ ! -s "$LIST_FILE" ]; then
+    echo "First run: generating cache..."
+    $HOME/.config/de-themes/wallpaper-thumbnail-cache.sh
+fi
+
+# Pass the list file to Rofi
 SELECTED=$(rofi -dmenu -i -p "View Wallpapers" \
     -show-icons \
-    -input "$LIST_FILE" \
-    -theme "$HOME/.config/rofi/wallpaper-grid.rasi")
+    -theme "$HOME/.config/rofi/wallpaper-grid.rasi" < "$LIST_FILE")
 
 #================================================
-# Write the chosen wallpaper to the cache files
+# Handle Selection
 #================================================
 if [ -n "$SELECTED" ]; then
-    # this is for the reboot file, its required to apply the wallpaper on boot
+    # Save selection for other scripts
     echo "$SELECTED" > "$HOME/.config/de-themes/applied_wallpaper"
-
     echo "$SELECTED" > "$TMP_CHOICE"
 
+    # Set the wallpaper
     swww img "${WALL_DIR}/${SELECTED}" --transition-type grow
     exit 0
 else
